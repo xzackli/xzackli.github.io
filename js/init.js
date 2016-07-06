@@ -5,28 +5,7 @@
 */
 
 (function($) {
-	var adjectives = [
-		"filthy member of the bourgeoisie",
-		"capitalist scum",
-		"traitor to the proletariat",
-		"enemy of the people",
-		"a spectre that is haunting Europe",
-		"collisions between the classes"
-	];
 
-	function rotate() {
-	    var i = 0;
-	    setInterval(function() {
-	        $("#adjective").text(adjectives[i]);
-	        i++;
-	        if(i >= adjectives.length) {
-	            i = 0;
-	        }
-	    }, 2000);
-	}
-
-	rotate();
-	
 	var settings = {
 
 		// Parallax background effect?
