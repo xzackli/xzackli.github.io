@@ -5,7 +5,6 @@
 */
 
 (function($) {
-
 	var settings = {
 
 		// Parallax background effect?
@@ -121,5 +120,11 @@
 				});
 
 	});
+
+	var angle = 0;
+	setInterval(function(){
+	  angle+=0.01;
+	$(".avatar").rotate(angle);
+	},1);
 
 })(jQuery);
