@@ -5,6 +5,6 @@ title: Logs
 
 Logs!
 
-{% for album in site.logs %}
-  <h2>{{ album.title }}</h2>
+{% for log in site.logs %}
+  <h2>{{ log.title }}</h2>
 {% endfor %}
