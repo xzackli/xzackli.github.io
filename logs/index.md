@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Logs
 ---
 
 1. First ordered list item
