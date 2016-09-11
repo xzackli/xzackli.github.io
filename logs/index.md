@@ -19,3 +19,9 @@ title: Logs
 * Unordered list can use asterisks
 - Or minuses
 + Or pluses
+
+<ul>
+{% for page in site.collections.logs %}
+  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
+</ul>
