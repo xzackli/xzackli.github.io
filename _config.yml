@@ -1,6 +1,6 @@
 # Site settings
 title: Zack Li
-description: 'graduate student in astrophysics at Princeton.'
+description: 'graduate student in astrophysics at Princeton'
 url: 'zack.li'
 baseurl: '/'
 # google_analytics: 'UA-XXXXXX-X'
@@ -41,3 +41,4 @@ exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
 collections:
   logs:
     output: true
+    
