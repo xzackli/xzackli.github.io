@@ -6,5 +6,5 @@ title: Logs
 Logs!
 
 {% for log in site.logs %}
-  <h2>{{ log.title }}</h2>
+   <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 {% endfor %}
