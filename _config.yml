@@ -1,12 +1,10 @@
 # Site settings
 
 title: Zack Li # Title of your site
-email: zq@princeton.edu # Your contant email
+email: zq@princeton.edu # Your contact email
 
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Graduate student in astrophysics at Princeton.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://zack.li" # the base hostname & protocol for your site
 
@@ -14,12 +12,12 @@ url: "http://zack.li" # the base hostname & protocol for your site
 # Replace the word 'example' with your username if you want to include the icon in the left sidebar
 # Delete the word 'example' if you don't want to include the icon in the left sidebar
 
-twitter_username:     example  # Replace this with your Twitter username
-github_username:      example  # Replace this with your GitHub username
-linkedin_username:    example  # Replace this with your LinkedIn username
-google_plus_username: example  # Replace this with your Google+ username
-facebook_username:    example  # Replace this with your Facebook username
-dribbble_username:    example  # Replace this with your Dribbble username
+twitter_username:       # Replace this with your Twitter username
+github_username:      xzackli  # Replace this with your GitHub username
+linkedin_username:      # Replace this with your LinkedIn username
+google_plus_username:   # Replace this with your Google+ username
+facebook_username:    xzackli  # Replace this with your Facebook username
+dribbble_username:      # Replace this with your Dribbble username
 
 # Build settings
 markdown: kramdown
