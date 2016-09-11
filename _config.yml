@@ -1,23 +1,39 @@
 # Site settings
+title: Jekyll-Uno
+description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
+url: 'http://joshgerdes.com/jekyll-uno'
+baseurl: '/jekyll-uno/'
+# google_analytics: 'UA-XXXXXX-X'
+# disqus_shortname: 'your-disqus-name'
 
-title: Zack Li # Title of your site
-email: zq@princeton.edu # Your contact email
+author:
+  name: 'Josh Gerdes'
+  email: josh@joshgerdes.com
+  twitter_username: joshgerdes
+  facebook_username: joshgerdes
+  github_username:  joshgerdes
+  linkedin_username:  joshgerdes
 
-description: > # this means to ignore newlines until "baseurl:"
-  Graduate student in astrophysics at Princeton.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://zack.li" # the base hostname & protocol for your site
-
-# Social links.
-# Replace the word 'example' with your username if you want to include the icon in the left sidebar
-# Delete the word 'example' if you don't want to include the icon in the left sidebar
-
-twitter_username:       # Replace this with your Twitter username
-github_username:      xzackli  # Replace this with your GitHub username
-linkedin_username:      # Replace this with your LinkedIn username
-google_plus_username:   # Replace this with your Google+ username
-facebook_username:    xzackli  # Replace this with your Facebook username
-dribbble_username:      # Replace this with your Dribbble username
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
 # Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
 markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+gems: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
