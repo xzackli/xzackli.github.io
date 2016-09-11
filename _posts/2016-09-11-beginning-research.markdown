@@ -4,7 +4,7 @@ date:   2016-09-11 17:24:00
 categories: [cmb]
 tags: [cmb]
 ---
-This semester I'm working with [Jo Dunkley][jo] on a project using ACTPol data and the numerical code [CLASS][classcode]. On Friday I compiled the CLASS code (surprisingly pleasant) and ran the example configuration. Using the code's plotting script `CPU.py`, one obtains the figure below.
+I'm working this semester with [Jo Dunkley][jo] on a project using ACTPol data and the numerical code [CLASS][classcode]. On Friday, I compiled the CLASS code (surprisingly pleasant) and ran the example configuration. Using the code's plotting script `CPU.py`, one obtains the figure below.
 
 ![CLASS Test Figure]({{ site.baseurl }}images/CLASS_test_figure.png)
 
