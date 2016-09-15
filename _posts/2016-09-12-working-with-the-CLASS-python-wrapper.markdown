@@ -4,6 +4,7 @@ date:   2016-09-12 19:26:00
 categories: [class]
 tags: [class]
 ---
+**Update:** *After testing this on my office computer, it looks my problems were unique to my laptop's Python configuration. It shouldn't happen for most users.*
 
 Getting the Python wrapper to work with [CLASS][classcode] takes a little off roading, but it's an easy adventure. After downloading the code, I used `make all` to produce all of the library files. However, because I'm using Anaconda on Linux, the math library `m` is not automatically linked. In setup.py, I had the following block:
 
