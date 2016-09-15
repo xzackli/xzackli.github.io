@@ -27,14 +27,14 @@ The critical line is the one with `libraries=["class", "m"],`, instead of the or
 
 After a quick `cd python` I then ran as instructed
 
-```Text
+```
 python setup.py build
 python setup.py install --user
 ```
 and after testing with `nose`, 
 
 
-```Text
+```
 nosetests test_class.py
 ```
 
