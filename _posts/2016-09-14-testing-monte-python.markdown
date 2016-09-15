@@ -12,15 +12,9 @@ For these exploratory Markov Chain chains, I'm using a fake likelihood function 
 However, I think it's especially cool just to see the text output when I only allow one free parameter (latest Planck measurements fix the other parameters), the value of `h`.
 
 
+<div style="color:blue">
 
-```Org
-TEST test test TEST
-TEST test test TEST
-TEST test test TEST
 ```
-
-
-```Pod
 Running Monte Python v2.2.2
 
 with CLASS v2.5.0
@@ -62,6 +56,7 @@ Deduced starting covariance matrix:
 14  49.3748	6.715667e-01	
 2  48.9348	6.712112e-01
 ```
+</h1>
 
 It's pretty cool to see the value of `h` converge to roughly 0.67 and also see the log-likelihood decrease, as the chain explores the parameter space.
 
