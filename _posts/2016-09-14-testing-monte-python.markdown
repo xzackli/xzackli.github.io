@@ -12,7 +12,7 @@ For these exploratory Markov Chain chains, I'm using a fake likelihood function 
 However, I think it's especially cool just to see the text output when I only allow one free parameter (latest Planck measurements fix the other parameters), the value of `h`.
 
 
-```
+```shell
 Running Monte Python v2.2.2
 
 with CLASS v2.5.0
