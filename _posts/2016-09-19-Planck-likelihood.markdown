@@ -1,6 +1,6 @@
 ---
 title:  "Planck Likelihood"
-date:   2016-09-14 09:44:00
+date:   2016-09-19 09:44:00
 categories: [class]
 tags: [class]
 ---
