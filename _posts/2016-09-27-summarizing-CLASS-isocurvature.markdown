@@ -8,7 +8,7 @@ I spent all weekend on my seminar talk on extragalactic magnetic fields from bla
 
 In this post, I'm going to give a rundown of the ways one can vary isocurvature in the CLASS initial conditions. 
 
-The first specifier for isocurvature turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\).
+The first parameter for isocurvature `ic` turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\).
 
 
 ~~~~~~~~~~~~~
@@ -23,15 +23,7 @@ ic = ad
 #ic = ad&bi&nid
 ~~~~~~~~~~~~~
 
-
-~~~~~~~~~~~~~
-1) primordial spectrum type ('analytic_Pk' for an analytic smooth function with amplitude, tilt, running, etc.; analytic spectra with feature can also be added as a new type;'inflation_V' for a numerical computation of the inflationary primordial spectrum, through a full integration of the perturbation equations, given a parametrization of the potential V(phi) in the observable window, like in astro-ph/0703625; 'inflation_H' for the same, but given a parametrization of the potential H(phi) in the observable window, like in astro-ph/0710.1630; 'inflation_V_end' for the same, but given a parametrization of the potential V(phi) in the whole region between the observable part and the end of inflation; there is also an option 'two scales' in order to specify two amplitudes instead of one amplitude and one tilt, like in the isocurvature mode analysis of the Planck inflation paper (works also for adiabatic mode only; see details below, item 2.c); finally 'external_Pk' allows for the primordial spectrum to be computed externally by some piece of code, or to be read from a table, see 2.d). (default: set to 'analytic_Pk')
-
-P_k_ini type = analytic_Pk
-~~~~~~~~~~~~~
-
-
-
+Next, we can prescribe the entropy-to-curvature ratio for each mode.
 ~~~~~~~~~~~
 2.a.3) isocurvature/entropy perturbations: for each mode xx ('xx' being one of
        'bi', 'cdi', 'nid', 'niv', corresponding to baryon, cdm, neutrino
@@ -54,7 +46,7 @@ etc.
 ~~~~~~~~~~~
 
 
-
+We then specify the isocurvature amplitude.
 ~~~~~~~~~~
 2.e.3) if one isocurvature mode has been turned on ('ic' set e.g. to 'ad,cdi'
        or 'ad,nid', etc.), enter values of the isocurvature amplitude
@@ -68,11 +60,7 @@ P_{RI}^1 = -1.e-13
 ~~~~~~~~~~
 
 
-
-
-
-
-
+Finally, there is a setting `special_iso` for using exotic components like axions and curvatons.
 ~~~~~~~~~~~~~~~~~
 2.e.4) set 'special iso' to 'axion' or 'curvaton' for two particular cases:
        'axion' means uncorrelated, n_ad equal to n_iso, 'curvaton' means fully
