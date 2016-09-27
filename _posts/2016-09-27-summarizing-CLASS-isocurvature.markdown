@@ -8,7 +8,9 @@ I spent all weekend on my seminar talk on extragalactic magnetic fields from bla
 
 In this post, I'm going to give a rundown of the ways one can vary isocurvature in the CLASS initial conditions. 
 
-The first specifier for isocurvature turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\[\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\].
+The first specifier for isocurvature turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\).
+
+
 ~~~~~~~~~~~~~
 7) list of initial conditions for scalars ('ad' for adiabatic, 'bi' for baryon
    isocurvature, 'cdi' for CDM isocurvature, 'nid' for neutrino density
