@@ -11,7 +11,7 @@ In this post, I'm going to give a rundown of the ways one can vary isocurvature 
 The first parameter for isocurvature `ic` turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\).
 
 
-~~~~~~~~~~~~~
+```
 7) list of initial conditions for scalars ('ad' for adiabatic, 'bi' for baryon
    isocurvature, 'cdi' for CDM isocurvature, 'nid' for neutrino density
    isocurvature, 'niv' for neutrino velocity isocurvature). More than one of
@@ -21,10 +21,10 @@ The first parameter for isocurvature `ic` turns on the kind of isocurvature mode
 
 ic = ad
 #ic = ad&bi&nid
-~~~~~~~~~~~~~
+```
 
 Next, we can prescribe the entropy-to-curvature ratio for each mode.
-~~~~~~~~~~~~~
+```
 2.a.3) isocurvature/entropy perturbations: for each mode xx ('xx' being one of
        'bi', 'cdi', 'nid', 'niv', corresponding to baryon, cdm, neutrino
        density and neutrino velocity entropy perturbations), enter the
@@ -43,11 +43,11 @@ n_nid=2.
 alpha_nid= 0.01
 
 etc.
-~~~~~~~~~~~~~
+```
 
 
 We then specify the isocurvature amplitude.
-~~~~~~~~~~~~~
+```
 2.e.3) if one isocurvature mode has been turned on ('ic' set e.g. to 'ad,cdi'
        or 'ad,nid', etc.), enter values of the isocurvature amplitude
        'P_{II}^1', 'P_{II}^2', and cross-correlation amplitude 'P_{RI}^1',
@@ -57,11 +57,11 @@ P_{II}^1 = 1.e-11
 P_{II}^2 = 1.e-11
 P_{RI}^1 = -1.e-13
 |P_{RI}^2| = 1.e-13
-~~~~~~~~~~~~~
+```
 
 
 Finally, there is a setting `special_iso` for using exotic components like axions and curvatons.
-~~~~~~~~~~~~~
+```
 2.e.4) set 'special iso' to 'axion' or 'curvaton' for two particular cases:
        'axion' means uncorrelated, n_ad equal to n_iso, 'curvaton' means fully
        anti-correlated with f_iso<0 (in the conventions of the Planck inflation
@@ -71,4 +71,4 @@ Finally, there is a setting `special_iso` for using exotic components like axion
        blanck, code assumes general case described by four parameters of 2.c.3)
 
 special_iso =
-~~~~~~~~~~~~~
+```
