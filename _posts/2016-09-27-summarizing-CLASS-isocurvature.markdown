@@ -4,7 +4,7 @@ date:   2016-09-27 13:35:00
 categories: [class]
 tags: [class]
 ---
-I spent all weekend on my seminar talk on extragalactic magnetic fields from blazar gamma rays and CMB polarization). It happens once per semester, but it meant I didn't get very much research done since last week.
+I spent all weekend on my seminar talk on extragalactic magnetic fields. It happens once per semester, but it meant I didn't get very much research done since last week.
 
 In this post, I'm going to give a rundown of the ways one can vary isocurvature in the CLASS initial conditions. 
 
