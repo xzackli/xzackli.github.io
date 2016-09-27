@@ -8,7 +8,7 @@ I spent all weekend on my seminar talk on extragalactic magnetic fields. It happ
 
 In this post, I'm going to give a rundown of the ways one can vary isocurvature in the CLASS initial conditions. 
 
-The first parameter for isocurvature `ic` turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying
+The first parameter for isocurvature `ic` turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\).
 
 
 ```
@@ -24,6 +24,7 @@ ic = ad
 ```
 
 Next, we can prescribe the entropy-to-curvature ratio for each mode.
+
 ```
 2.a.3) isocurvature/entropy perturbations: for each mode xx ('xx' being one of
        'bi', 'cdi', 'nid', 'niv', corresponding to baryon, cdm, neutrino
@@ -47,6 +48,7 @@ etc.
 
 
 We then specify the isocurvature amplitude.
+
 ```
 2.e.3) if one isocurvature mode has been turned on ('ic' set e.g. to 'ad,cdi'
        or 'ad,nid', etc.), enter values of the isocurvature amplitude
@@ -61,6 +63,7 @@ P_{RI}^1 = -1.e-13
 
 
 Finally, there is a setting `special_iso` for using exotic components like axions and curvatons.
+
 ```
 2.e.4) set 'special iso' to 'axion' or 'curvaton' for two particular cases:
        'axion' means uncorrelated, n_ad equal to n_iso, 'curvaton' means fully
