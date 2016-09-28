@@ -11,3 +11,6 @@ Using CLASS it's pretty easy to explore the parameter space via power spectra. I
 ![Reproduced Planck Figure 21 Linear Y]({{ site.baseurl }}images/planck_fig21.png)
 
 But what about higher resolutions?
+
+![Large l Planck Figure 21 Log Y]({{ site.baseurl }}images/large_l_p21.png)
+![Large l Planck Figure 21 Linear Y]({{ site.baseurl }}images/lin_large_l_p21.png)
