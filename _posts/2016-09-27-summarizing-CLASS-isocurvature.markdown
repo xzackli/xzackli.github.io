@@ -8,7 +8,7 @@ I spent all weekend on my seminar talk on extragalactic magnetic fields. It happ
 
 In this post, I'm going to give a rundown of the ways one can vary isocurvature in the CLASS initial conditions. 
 
-The first parameter for isocurvature `ic` turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\).
+The first parameter for isocurvature `ic` turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\). THe following excerpts are taken from `explanatory.ini`, provided with the CLASS distribution.
 
 
 ```
