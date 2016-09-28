@@ -23,6 +23,15 @@ ic = ad
 #ic = ad&bi&nid
 ```
 
+Next, we can describe the way we specify a primordial distribution. In my next post, I'll describe why this is important in the context of reproducing the Planck isocurvature result.
+
+```
+
+1) primordial spectrum type ('analytic_Pk' for an analytic smooth function with amplitude, tilt, running, etc.; analytic spectra with feature can also be added as a new type;'inflation_V' for a numerical computation of the inflationary primordial spectrum, through a full integration of the perturbation equations, given a parametrization of the potential V(phi) in the observable window, like in astro-ph/0703625; 'inflation_H' for the same, but given a parametrization of the potential H(phi) in the observable window, like in astro-ph/0710.1630; 'inflation_V_end' for the same, but given a parametrization of the potential V(phi) in the whole region between the observable part and the end of inflation; there is also an option 'two scales' in order to specify two amplitudes instead of one amplitude and one tilt, like in the isocurvature mode analysis of the Planck inflation paper (works also for adiabatic mode only; see details below, item 2.c); finally 'external_Pk' allows for the primordial spectrum to be computed externally by some piece of code, or to be read from a table, see 2.d). (default: set to 'analytic_Pk')
+
+P_k_ini type = analytic_Pk
+```
+
 Next, we can prescribe the entropy-to-curvature ratio for each mode.
 
 ```
