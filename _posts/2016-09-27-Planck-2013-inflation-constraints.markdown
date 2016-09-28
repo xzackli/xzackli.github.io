@@ -5,15 +5,20 @@ categories: [class]
 tags: [class]
 ---
 
-[Planck](http://arxiv.org/abs/1303.5082) parametrizes isocurvature in a pretty reasonable way. We assume that the adiabatic, isocurvature, and cross-corrrelation power spectra obey power laws with some index $n$. 
+[Planck](http://arxiv.org/abs/1303.5082) parametrizes isocurvature in a pretty reasonable way. We assume that the adiabatic, isocurvature, and cross-corrrelation power spectra obey power laws with some index $$n$$. 
 
-> Question 
->> Why does one expect power spectra of isocurvature to exhibit near scale invariance?
+
+> Why do we expect isocurvature power spectra to be nearly scale invariant?
 
 How do you parametrize a power law? The standard way, 
 $$f(x) = ax^b$$
 chooses a pivot scale (0 in this case) and normalization $$a$$. The Planck collaboration chose not to use this method due to some mysterious Bayesian reasons (something about a prior). Instead, we specify the power $$\mathcal{P}_{ab}$$ at two scales $$k = k_1$$ and $$k=k_2$$, interpolating in a specific way,
 
-$$ \mathcal{P}_{ab}(k) = \text{exp} \left[ \left( \frac{\ln(k) - \ln(k_2) }{\ln(k_1) - \ln(k_2) } \right) \ln( \mathcal{P}^(1)_{ab} ) \left( \frac{\ln(k) - \ln(k_1)}{\ln(k_2) - \ln(k_1) } \right) \ln( \mathcal{P}^(2)_{ab} )  \right].$$
+$$ \mathcal{P}_{ab}(k) = \text{exp} \left[ \left( \frac{\ln(k) - \ln(k_2) }{\ln(k_1) - \ln(k_2) } \right) \ln( \mathcal{P}^{(1)}_{ab} ) \left( \frac{\ln(k) - \ln(k_1)}{\ln(k_2) - \ln(k_1) } \right) \ln( \mathcal{P}^{(2)}_{ab} )  \right].$$
 
-$$\text{exp}$$
+In the case of the Planck paper, the two scales were chosen to fit the Planck data scales, 
+
+$$k_1 = 2 \times 10^{-3} \text{ Mpc}^{-1},$$
+$$k_2 = 0.1 \text{ Mpc}^{-1}.$$
+
+Basically the output of Monte Python should be chains of $$\mathcal{P}^{(1)}_{ab}$$ and $$\mathcal{P}^{(2)}_{ab}$$, where $$a$$ and $$b$$ refer to adiabatic/isocurvature modes.
