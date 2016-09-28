@@ -14,8 +14,6 @@ How do you parametrize a power law? The standard way,
 $$f(x) = ax^b$$
 chooses a pivot scale (0 in this case) and normalization $$a$$. The Planck collaboration chose not to use this method due to some mysterious Bayesian reasons (something about a prior). Instead, we specify the power $$\mathcal{P}_{ab}$$ at two scales $$k = k_1$$ and $$k=k_2$$, interpolating in a specific way,
 
-$$ \mathcal{P}_{ab}(k) = \text{exp} \left[ \left( \frac{\ln(k) - \ln(k_2)}{\ln(k_1) - \ln(k_2) } \right) \ln( \mathcal{P}^(1)_{ab} ) 
+$$ \mathcal{P}_{ab}(k) = \text{exp} \left[ \left( \frac{\ln(k) - \ln(k_2) }{\ln(k_1) - \ln(k_2) } \right) \ln( \mathcal{P}^(1)_{ab} ) \left( \frac{\ln(k) - \ln(k_1)}{\ln(k_2) - \ln(k_1) } \right) \ln( \mathcal{P}^(2)_{ab} )  \right].$$
 
-$$ left( \frac{\ln(k) - \ln(k_1)}{\ln(k_2) - \ln(k_1) } \right) \ln( \mathcal{P}^(2)_{ab} )  \right].$$
-
-$$ \ln $$
+$$\text{exp}$$
