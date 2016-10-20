@@ -1,5 +1,5 @@
 ---
-title:  "Testing Monte Python"
+title:  "Need to Write a New Monte Python Prior"
 date:   2016-10-20 19:22:00
 categories: [class]
 tags: [class]
@@ -7,7 +7,7 @@ tags: [class]
 
 I'm having some issues reproducing the Planck 2015 result. I spent the last few weeks learning QFT and some MCMC diagnostics. QFT started taking up all of my time, so I had to drop the class. I'll pick up the material later. 
 
-I'm getting an error message to due a condition described in the Planck papers, that 
+I'm getting an error message to due a condition described in the Planck 2015 XX, equation 129,
 
 $$ \frac{ \mathcal{P}_{RI} }{ \sqrt{ \mathcal{P}_{RR} \mathcal{P}_{II} } } \in (-1,1). $$
 
