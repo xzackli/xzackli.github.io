@@ -33,7 +33,7 @@ if( 'P_{RI}^1' in parameter_names ):
     prr1 = vector_new[parameter_names.index('P_{RR}^1')]
 
     # equation 128 of Planck 2015 XX
-    if (abs(pri1)/math.sqrt(pii1*prr1)>1):
+    if (abs(pri1)/math.sqrt(abs(pii1*prr1))>1):
         flag += 1 # we're not moving here.
 ```
 
