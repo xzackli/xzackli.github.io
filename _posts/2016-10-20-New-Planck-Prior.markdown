@@ -37,7 +37,7 @@ if( 'P_{RI}^1' in parameter_names ):
         flag += 1 # we're not moving here.
 ```
 
-We also add the following to after line 795 of `data.py`, to ensure we also satisfy equation 129 of Planck 2015 XX. This defines $\mathcal{P}_{RI}^2$ as a derived parameter,
+We also add the following to after line 795 of `data.py`, to ensure we also satisfy equation 129 of Planck 2015 XX. This defines $$\mathcal{P}_{RI}^2$$ as a derived parameter,
 
 $$ \mathcal{P}_{RI}^2 = \mathcal{P}_{RI}^1 \frac{ \sqrt{ \mathcal{P}_{II}^2 \mathcal{P}_{RR}^2 } } { \sqrt{\mathcal{P}_{II}^1 \mathcal{P}_{RR}^1}} .$$
 
