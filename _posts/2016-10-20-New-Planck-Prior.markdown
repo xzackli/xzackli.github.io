@@ -21,7 +21,7 @@ Cosmological Module Error:
        is true; too large ad-iso cross-correlation in k1
 ~~~~~~
 
-I'll need to write a custom boundary condition within the Monte Python code. I've put the following snippet in the `get_new_position` function in `mcmc.py`.
+~~I'll need to write~~ I wrote a custom boundary condition within the Monte Python code. I've put the following snippet in the `get_new_position` function in `mcmc.py`.
 
 ```python
 # check a special condition for two amplitude isocurvature
