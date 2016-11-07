@@ -7,13 +7,13 @@ tags: [actpol]
 
 I wrote up a Python implementation of the ACTPol season 2 Fortran likelihood. I've written up quite a bit of documentation for this, and it's available publically on [Github](https://github.com/xzackli/actpols2_like_py).
 
-## This Week, In Checkboxes!
+##$ This Week, In Lists!
 
-### Learning
-- [ ] Finish relearning GR.
-- [ ] Memorize the equations for the stars class.
+#### Learning
+* Finish relearning GR.
+* [ ] Memorize the equations for the stars class.
 
-### Research
-- [ ] ACTPol season 2 likelihood testing -- check if our parameters match those of E. Calabrese. 
-- [ ] Apply the new likelihood for isocurvature
-- [ ] Test out the affine-invariant ensemble sampler.
+#### Research
+* ACTPol season 2 likelihood testing -- check if our parameters match those of E. Calabrese. 
+* Apply the new likelihood for isocurvature
+* Test out the affine-invariant ensemble sampler.
