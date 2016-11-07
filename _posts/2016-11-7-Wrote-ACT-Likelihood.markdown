@@ -7,7 +7,7 @@ tags: [actpol]
 
 I wrote up a Python implementation of the ACTPol season 2 Fortran likelihood. I've written up quite a bit of documentation for this, and it's available publically on [Github](https://github.com/xzackli/actpols2_like_py).
 
-##$ This Week, In Lists!
+### This Week, In Lists!
 
 #### Learning
 * Finish relearning GR.
