@@ -11,7 +11,7 @@ I wrote up a Python implementation of the ACTPol season 2 Fortran likelihood. I'
 
 #### Learning
 * Finish relearning GR.
-* [ ] Memorize the equations for the stars class.
+* Memorize the equations for the stars class.
 
 #### Research
 * ACTPol season 2 likelihood testing -- check if our parameters match those of E. Calabrese. 
