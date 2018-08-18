@@ -22,12 +22,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
 }
 
-h1::before { background-color: inherit; color: #000; content: '> '; }
-h2::before { background-color: inherit; color: #000; content: '## '; }
-h3::before { background-color: inherit; color: #000; content: '### '; }
-h4::before { background-color: inherit; color: #000; content: '#### '; }
-h5::before { background-color: inherit; color: #000; content: '##### '; }
-h6::before { background-color: inherit; color: #000; content: '###### '; }
+h1::before { color: #000; content: '> '; }
+h2::before { color: #000; content: '## '; }
+h3::before { color: #000; content: '### '; }
+h4::before { color: #000; content: '#### '; }
+h5::before { color: #000; content: '##### '; }
+h6::before { color: #000; content: '###### '; }
 
 hr {
   border: 0;
