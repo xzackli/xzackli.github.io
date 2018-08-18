@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main>
+  <article>
+    <div class="title">
+      <h1>{{ .Title }}</h1>
+      {{ if isset .Params "description" }}
+      <div class="tldr">
+        {{ .Description | markdownify }}
+      </div>
+      {{ end }}
+      <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2, 2006" .Date }}</time>
+    </div>
+
+    <section class="body">
+      {{ .Content }}
+    </section>
+  </article>
+</main>
+{{ end }}

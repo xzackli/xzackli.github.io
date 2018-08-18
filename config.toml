@@ -1,0 +1,9 @@
+baseURL = "https://zack.li/"
+languageCode = "en-us"
+title = "Zack Li"
+theme = "blog"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  description = "Zack Li's blog"

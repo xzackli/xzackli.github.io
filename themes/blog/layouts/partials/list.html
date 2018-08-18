@@ -1,0 +1,13 @@
+<main class="list">
+  {{ range .Data.Pages }}
+  <section class="list-item">
+    <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2, 2006" .Date }}</time>
+    {{ if isset .Params "description" }}
+    <div class="description">
+      {{ .Description | markdownify }}
+    </div>
+    {{ end }}
+  </section>
+  {{ end }}
+</main>
