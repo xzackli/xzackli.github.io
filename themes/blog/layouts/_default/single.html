@@ -8,7 +8,9 @@
         {{ .Description | markdownify }}
       </div>
       {{ end }}
+      {{ if not .Date.IsZero }}
       <time datetime="{{ dateFormat "2006-01-02" .Date }}">{{ dateFormat "Jan 2, 2006" .Date }}</time>
+      {{ end }}
     </div>
 
     <section class="body">
