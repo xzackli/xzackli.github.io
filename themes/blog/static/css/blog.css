@@ -158,7 +158,8 @@ header {
   padding: 0 1ch;
 }
 
-header a {
+header a, header a:hover {
+  background-color: transparent;
   border-bottom: none;
 }
 
