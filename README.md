@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/veggiedefender/blog.svg?token=PDUc4qxJHc1pk56xHFbZ&branch=master)](https://travis-ci.com/veggiedefender/blog)
+[![Build Status](https://travis-ci.org/xzackli/xzackli.github.io.svg?branch=master)]()
 
 # Cheat sheet
 
