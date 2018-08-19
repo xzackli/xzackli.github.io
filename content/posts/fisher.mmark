@@ -1,0 +1,9 @@
+---
+title:  "Introduction to Fisher Forecasts"
+date:   2018-08-19 13:33:00
+description: an educational Jupyter notebook for cosmological forecasts
+---
+
+I've written an [introduction to cosmological forecasting with Fisher information matrices](http://nbviewer.jupyter.org/github/xzackli/fishchips-public/blob/master/notebooks/Introduction%20to%20Fisher%20Forecasting.ipynb), a Jupyter notebook which should teach some of the theory behind Fisher matrices while also providing a hands-on guide. After an advanced undergraduate or early graduate student has completed the notebook, they'll have written a basic Fisher code for themselves!
+
+The ideas for this came about after developing the code [fishchips](https://github.com/xzackli/fishchips-public). Making Fisher matrices is pretty easy, but I felt like reading papers is a hard way to learn about specific scientific tools, and it's especially bad for building intuition. 
