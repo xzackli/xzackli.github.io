@@ -1,6 +1,7 @@
 ---
 title:  "Planck 2013 Isocurvature Constraints"
 date:   2016-09-27 20:30:00
+draft: true
 ---
 
 [Planck](http://arxiv.org/abs/1303.5082) parametrizes isocurvature in a pretty reasonable way. We assume that the adiabatic, isocurvature, and cross-corrrelation power spectra obey power laws with some index $$n$$.

@@ -1,6 +1,7 @@
 ---
 title:  "Working with the CLASS python wrapper"
 date:   2016-09-12 19:26:00
+draft: true
 ---
 **Update:** *After testing this on my office computer, it looks my problems were unique to my laptop's Python configuration. It shouldn't happen for most users.*
 
@@ -30,7 +31,7 @@ After a quick `cd python` I then ran as instructed
 python setup.py build
 python setup.py install --user
 ```
-and after testing with `nose`, 
+and after testing with `nose`,
 
 
 ```

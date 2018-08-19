@@ -1,9 +1,10 @@
 ---
 title:  "Exploring Isocurvature Mode Spectra"
 date:   2016-09-27 22:28:00
+draft: true
 ---
 
-Using CLASS it's pretty easy to explore the parameter space via power spectra. I plotted the pure, scale invariant isocurvature modes, reproducing [Planck](http://arxiv.org/abs/1303.5082) 2013 figure 21. 
+Using CLASS it's pretty easy to explore the parameter space via power spectra. I plotted the pure, scale invariant isocurvature modes, reproducing [Planck](http://arxiv.org/abs/1303.5082) 2013 figure 21.
 
 {{< figure src="/images/loglog_planck_fig21.png" title="Reproduced Planck Figure 21 Log Y" >}}
 

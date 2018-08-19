@@ -1,19 +1,20 @@
 ---
 title:  "Reproducing a plot in Dodelson"
 date:   2016-09-13 14:52:00
+draft: true
 ---
 
-The Python wrapper makes it very easy to generate power spectra from Planck cosmological parameters (the default CLASS configuration). I'm using scalar perturbations and I've enabled lensing, though I can't tell what the effect of lensing is, in this case. 
+The Python wrapper makes it very easy to generate power spectra from Planck cosmological parameters (the default CLASS configuration). I'm using scalar perturbations and I've enabled lensing, though I can't tell what the effect of lensing is, in this case.
 
 ```python
 from classy import Class
-import matplotlib.pyplot as plt 
-import numpy as np 
+import matplotlib.pyplot as plt
+import numpy as np
 import math
 
 # Define your cosmology (what is not specified will be set to CLASS default parameters)
 params = {
-    'output': 'tCl lCl pCl', 
+    'output': 'tCl lCl pCl',
     'modes': 's', # scalar perturbations
     'lensing': 'yes'}
 
@@ -37,9 +38,9 @@ print dir(cosmo) # use this command to see what is in the cosmo
 cls = cosmo.lensed_cl(1000)  # Access the  cl until l=1000
 
 # we exclude the low l (up to 50) for nice display
-xx = np.array( range(1001)[52:] ) 
+xx = np.array( range(1001)[52:] )
 yy = np.array( cls['ee'][52:] )
-zz = np.array( cls['tt'][52:] ) 
+zz = np.array( cls['tt'][52:] )
 
 ee = ((xx)*(xx+1) * yy / (2 * math.pi))**0.5 * 1e6
 tt =  ((xx)*(xx+1) * zz / (2 * math.pi))**0.5 * 1e6

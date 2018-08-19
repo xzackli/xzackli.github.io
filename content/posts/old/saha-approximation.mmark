@@ -1,6 +1,7 @@
 ---
 title:  "Saha approximation for the free electron fraction"
 date:   2016-11-28 12:30:00
+draft: true
 ---
 
 Here we reproduce a basic cosmological calculation. At recombination, the free electron fraction can be written
@@ -29,7 +30,7 @@ n = 1
 Yp = 0
 omega_lambda = 1 - (omega_r + omega_b + omega_m)
 
-# baryon density 
+# baryon density
 rho_c = 3 * H0**2 / (8 * const.pi * const.G )
 ```
 

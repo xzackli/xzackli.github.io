@@ -1,10 +1,11 @@
 ---
 title:  "Summarizing CLASS isocurvature"
 date:   2016-09-27 13:35:00
+draft: true
 ---
 I spent all weekend on my seminar talk on extragalactic magnetic fields. It happens once per semester, but it meant I didn't get very much research done since last week.
 
-In this post, I'm going to give a rundown of the ways one can vary isocurvature in the CLASS initial conditions. 
+In this post, I'm going to give a rundown of the ways one can vary isocurvature in the CLASS initial conditions.
 
 The first parameter for isocurvature `ic` turns on the kind of isocurvature modes we will allow. Remember that these are **isocurvature** perturbations, and thus preserve curvature while still perturbing primordial components. These arise from the three isocurvature modes when varying \\(\delta_{\gamma}, \delta_{\nu}, \delta_b, \delta_c \\). THe following excerpts are taken from `explanatory.ini`, provided with the CLASS distribution.
 
