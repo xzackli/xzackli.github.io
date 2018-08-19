@@ -1,0 +1,14 @@
+install:
+  - curl -L 'https://github.com/gohugoio/hugo/releases/download/v0.44/hugo_0.44_Linux-64bit.tar.gz' | tar -xz
+
+script:
+  - ./hugo
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  local_dir: public
+  github_token: $GITHUB_TOKEN
+  fqdn: zack.li
+  on:
+    branch: master

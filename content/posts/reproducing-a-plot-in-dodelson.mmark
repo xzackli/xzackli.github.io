@@ -1,0 +1,83 @@
+---
+title:  "Reproducing a plot in Dodelson"
+date:   2016-09-13 14:52:00
+---
+
+The Python wrapper makes it very easy to generate power spectra from Planck cosmological parameters (the default CLASS configuration). I'm using scalar perturbations and I've enabled lensing, though I can't tell what the effect of lensing is, in this case. 
+
+```python
+from classy import Class
+import matplotlib.pyplot as plt 
+import numpy as np 
+import math
+
+# Define your cosmology (what is not specified will be set to CLASS default parameters)
+params = {
+    'output': 'tCl lCl pCl', 
+    'modes': 's', # scalar perturbations
+    'lensing': 'yes'}
+
+# Create an instance of the CLASS wrapper
+cosmo = Class()
+
+# Set the parameters to the cosmological code
+cosmo.set(params)
+
+# Run the whole code. Depending on your output, it will call the
+# CLASS modules more or less fast. For instance, without any
+# output asked, CLASS will only compute background quantities,
+# thus running almost instantaneously.
+# This is equivalent to the beginning of the `main` routine of CLASS,
+# with all the struct_init() methods called.
+cosmo.compute()
+
+print dir(cosmo) # use this command to see what is in the cosmo
+
+# It is a dictionary that contains the fields: tt, te, ee, bb, pp, tp
+cls = cosmo.lensed_cl(1000)  # Access the  cl until l=1000
+
+# we exclude the low l (up to 50) for nice display
+xx = np.array( range(1001)[52:] ) 
+yy = np.array( cls['ee'][52:] )
+zz = np.array( cls['tt'][52:] ) 
+
+ee = ((xx)*(xx+1) * yy / (2 * math.pi))**0.5 * 1e6
+tt =  ((xx)*(xx+1) * zz / (2 * math.pi))**0.5 * 1e6
+
+# Print on screen to see the output
+# print len(cls['tt'])
+
+# plot something with matplotlib...
+plt.plot( xx, tt, label='TT' )
+plt.plot( xx, ee, label='EE' )
+
+#formatting
+plt.yscale('log')
+plt.xlabel(r'$l$')
+plt.ylabel(r'$[l(l+1)C_l / 2 \pi ]^{1/2}$ $(\mu K)$')
+plt.legend()
+plt.show()
+
+
+# Clean CLASS (the equivalent of the struct_free() in the `main`
+# of CLASS. This step is primordial when running in a loop over different
+# cosmologies, as you will saturate your memory very fast if you ommit
+# it.
+cosmo.struct_cleanup()
+
+# If you want to change completely the cosmology, you should also
+# clean the arguments, otherwise, if you are simply running on a loop
+# of different values for the same parameters, this step is not needed
+cosmo.empty()
+```
+
+The short Python script (based on the one from the CLASS wiki) reproduces Figure 10.18 in Dodelson's [Modern Cosmology][dodelsoncosmo].
+
+{{< figure src="/images/dodelsonfig10_18.png" title="Reproduced Dodelson Figure 10.18" >}}
+
+Although this was probably not neccesary, I really like reproducing existing results whenever I work with some new area of research. It's really reassuring to see that I'm not completely off track.
+
+
+[jo]:        http://physics.princeton.edu/~jdunkley/
+[classcode]: http://class-code.net/
+[dodelsoncosmo]: https://www.amazon.com/Modern-Cosmology-Scott-Dodelson/dp/0122191412

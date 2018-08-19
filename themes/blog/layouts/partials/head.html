@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{ if .IsHome }}
+  <title>{{ .Site.Title }}</title>
+  <meta name="description" content="{{ $.Site.Params.description }}">
+  {{ else }}
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Summary | plainify }}{{ end }}">
+  {{ end }}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/blog.css">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/syntax.css" media="screen">
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}css/print.css" media="print">
+</head>
