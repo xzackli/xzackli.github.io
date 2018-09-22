@@ -24,7 +24,7 @@ Then I run the command `lab_start` whenever I want to start up a new Jupyter env
 Then I add this to the `.bashrc` of the client machine
 
 ```
-alias connect7090="ssh -N -f -L 7090:localhost:7090 YOURUSERNAME@HOSTNAME.edu"
+alias lab7090="ssh -N -f -L 7090:localhost:7090 YOURUSERNAME@HOSTNAME.edu"
 ```
 
-Then when I run `connect7090`, it will pipe the port 7090 over SSH, and now you see your Jupyter Lab session on your server, in the browser of your client machine by clicking the link.
+Then when I run `lab7090`, it will pipe the port 7090 over SSH, and now you see your Jupyter Lab session on your server, in the browser of your client machine by clicking the link provided by the `lab_start` output.
