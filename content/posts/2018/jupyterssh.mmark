@@ -10,6 +10,7 @@ This solves two annoying problems associated with academic work,
 
 *  **Setting up other people's academic code is difficult.** You install your software stack only once, on the Linux machine running the server. Then you can run your code from a remote browser on whatever machine you want, and reconnect later to make analysis plots.
 * **Remote editing can get desynchronized.** An alternative workflow is to use `rsync` or an editor like Atom with Remote FTP. But then you have two copies of your files, and things can get pretty confusing. 
+* **I develop on a Mac, but my finished code will run on Linux clusters.** Ideally I would have a Linux laptop, but since I don't, I need all code to run on the Linux server machine.
 
 Jupyter notebooks can be useful as visual pseudo-documentation to remind you of what you were doing a year ago, and are also very good for making interactive, incremental changes. One disadvantage is that it's not the best way to work with Fortran/C/C++ code, which you might want an IDE for. In an ideal world, I'd never have to do that and would code everything in Julia....
 
