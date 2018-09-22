@@ -8,12 +8,12 @@ description: developing research code over SSH
 
 This solves two annoying problems associated with academic work,
 
-*  **Setting up other people's academic code is annoying.** You install your software stack only once, on the Linux machine running the server. Then you can run your code from a remote browser on whatever machine you want, and reconnect later to make analysis plots.
+*  **Setting up other people's academic code is difficult.** You install your software stack only once, on the Linux machine running the server. Then you can run your code from a remote browser on whatever machine you want, and reconnect later to make analysis plots.
 * **Remote editing can get desynchronized.** An alternative workflow is to use `rsync` or an editor like Atom with Remote FTP. But then you have two copies of your files, and things can get pretty confusing. 
 
 Jupyter notebooks can be useful as visual pseudo-documentation to remind you of what you were doing a year ago, and are also very good for making interactive, incremental changes. One disadvantage is that it's not the best way to work with Fortran/C/C++ code, which you might want an IDE for. In an ideal world, I'd never have to do that and would code everything in Julia....
 
-Anyway, I use [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906). Once you've installed it, I add this line to the `.bashrc` of the machine I want to SSH to (the server)
+Anyway, I use [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906). Once you've installed it on your server machine with `pip install jupyterlab --user` or `conda`, I add this line to the `.bashrc` of the machine I want to SSH to (the server)
 
 ```
 alias lab_start="jupyter lab --no-browser --ip=127.0.0.1 --port=7090"
