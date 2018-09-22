@@ -1,0 +1,30 @@
+---
+title:  "Jupyter Over SSH Workflow"
+date:   2018-09-21 23:12:00
+description: developing research code over SSH
+---
+
+`Jupyter + Julia + Python` piped over SSH is a really great way to develop research code. You get a desktop machine which runs linux, and set up a Jupyter server which runs your notebooks. Then you edit those notebooks in your browser over SSH. 
+
+This solves two annoying problems associated with academic work,
+
+*  **Setting up other people's academic code is annoying.** You install your software stack only once, on the Linux machine running the server. Then you can run your code from a remote browser on whatever machine you want, and reconnect later to make analysis plots.
+* **Remote editing can get desynchronized.** An alternative workflow is to use `rsync` or an editor like Atom with Remote FTP. But then you have two copies of your files, and things can get pretty confusing. 
+
+Jupyter notebooks can be useful as visual pseudo-documentation to remind you of what you were doing a year ago, and are also very good for making interactive, incremental changes. One disadvantage is that it's not the best way to work with Fortran/C/C++ code, which you might want an IDE for. In an ideal world, I'd never have to do that and would code everything in Julia....
+
+Anyway, I use [JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906). Once you've installed it, I add this line to the `.bashrc` of the machine I want to SSH to (the server)
+
+```
+alias lab_start="jupyter lab --no-browser --ip=127.0.0.1 --port=7090"
+```
+
+Then I run the command `lab_start` whenever I want to start up a new Jupyter environment. To keep this server in the background, it can be useful to run `lab_start` in a `screen` session. This will print out a link, which you will want to put into the browser of your client machine (i.e. your laptop)
+
+Then I add this to the `.bashrc` of the client machine
+
+```
+alias connect7090="ssh -N -f -L 7090:localhost:7090 YOURUSERNAME@HOSTNAME.edu"
+```
+
+Then when I run `connect7090`, it will pipe the port 7090 over SSH, and now you see your Jupyter Lab session on your server, in the browser of your client machine by clicking the link.
