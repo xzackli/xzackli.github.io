@@ -1,0 +1,20 @@
+---
+title:  "Juypter Notebook Cell Magic"
+date:   2019-03-26 13:00:00
+description: some lines I keep typing
+---
+
+I use some Python cell magic repeatedly -- this post is so I can refer to it
+when I need to paste it into a new notebook.
+
+```
+%matplotlib inline
+%load_ext autoreload
+%autoreload 2
+%config InlineBackend.figure_format = 'retina'
+```
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+```
