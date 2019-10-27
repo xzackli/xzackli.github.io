@@ -6,8 +6,7 @@ description: using Latin Roman locally with matplotlib
 
 I like making plots with [Latin Roman](http://www.gust.org.pl/projects/e-foundry/latin-modern), a successor font of Computer Modern which has pleasing serifs and more importantly, looks like the default LaTeX font for many journals. You can't install fonts and then refresh the font-cache on the cluster though, since most users don't have `sudo` access. Here's a way to **install Latin Roman for just matplotlib inside your conda environment**.
 
-{{< figure title="Example power spectrum plot" src="/images/example_power_spectrum.png">}}
-*An example of this font in use, to make a debugging plot.*
+{{< figure title="An example of this font in use" src="images/example_power_spectrum.png">}}
 
 First, download the fonts.
 

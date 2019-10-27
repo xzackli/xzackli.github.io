@@ -7,14 +7,14 @@ description: some lines I keep typing
 I use some Python cell magic repeatedly -- this post is so I can refer to it
 when I need to paste it into a new notebook.
 
-```
+```python
 %matplotlib inline
 %load_ext autoreload
 %autoreload 2
 %config InlineBackend.figure_format = 'retina'
 ```
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 ```
