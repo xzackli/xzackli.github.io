@@ -18,3 +18,5 @@ when I need to paste it into a new notebook.
 import numpy as np
 import matplotlib.pyplot as plt
 ```
+
+The `autoreload` lets me edit any imported code files and have them change in real time, which is really nice for the notebook workflow.

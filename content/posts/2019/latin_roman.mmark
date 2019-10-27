@@ -1,0 +1,33 @@
+---
+title:  "Sexy Fonts on the Cluster"
+date:   2019-10-26 21:32:00
+description: how to use Latin Roman with matplotlib
+---
+
+I like making plots with [Latin Roman](http://www.gust.org.pl/projects/e-foundry/latin-modern), a successor font of Computer Modern which has pleasing serifs and more importantly, looks like the default LaTeX font for many journals. You can't install fonts and then refresh the font-cache on the cluster though, since most users don't have `sudo` access. Here's a way to **install Latin Roman for just matplotlib inside your conda environment**.
+
+{{< figure title="Example power spectrum plot" src="/images/example_power_spectrum.png">}}
+*An example of this font in use, to make a debugging plot.*
+
+First, download the fonts.
+
+```bash
+wget http://mirrors.ctan.org/fonts/lm.zip
+unzip lm.zip
+```
+
+Next, activate your Anaconda environment of choice and copy the fonts into Matplotlib. This assumes your Anaconda distribution stores data in the default location `~/.conda`.
+
+```bash
+cp lm/fonts/opentype/public/lm/* ~/.conda/envs/$CONDA_DEFAULT_ENV/lib/python3.7/site-packages/matplotlib/mpl-data/fonts/ttf
+```
+Next, refresh matplotlib's font cache.
+
+```bash
+python -c "import matplotlib.font_manager as fm; fm._rebuild()"
+```
+Finally, we can delete those temporary font files.
+
+```bash
+rm -rf lm lm.zip
+```
