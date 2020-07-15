@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Zack Li</title>
+    <link>https://zack.li/posts/</link>
+    <description>Recent content in Posts on Zack Li</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Oct 2019 20:52:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://zack.li/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Running Code at Juypter Kernel Startup</title>
+      <link>https://zack.li/posts/2019/jupyter_kernel_run/</link>
+      <pubDate>Sat, 26 Oct 2019 20:52:00 +0000</pubDate>
+      
+      <guid>https://zack.li/posts/2019/jupyter_kernel_run/</guid>
+      <description>I sometimes want to set environmental variables like LD_LIBRARY_PATH and CFLAGS before starting a particular conda kernel in Jupyter, like when I&#39;m using Python code wrapping a C library.
+In this case, the important file is the kernel.json. But first, we need to write a file which exports the appropriate environmental variables and then launches the kernel. For example, I put my example of this kind of script in ~/scripts/kernel-intel.sh. It sets up variables for the Intel compiler suite on the cluster:</description>
+    </item>
+    
+    <item>
+      <title>Juypter Notebook Cell Magic</title>
+      <link>https://zack.li/posts/2019/cellmagic/</link>
+      <pubDate>Tue, 26 Mar 2019 13:00:00 +0000</pubDate>
+      
+      <guid>https://zack.li/posts/2019/cellmagic/</guid>
+      <description>I use some Python cell magic repeatedly -- this post is so I can refer to it when I need to paste it into a new notebook.
+%matplotlib inline %load_ext autoreload %autoreload 2 %config InlineBackend.figure_format = &amp;#39;retina&amp;#39;import numpy as np import matplotlib.pyplot as plt The autoreload lets me edit any imported code files and have them change in real time, which is really nice for the notebook workflow.</description>
+    </item>
+    
+    <item>
+      <title>Jupyter Over SSH Workflow</title>
+      <link>https://zack.li/posts/2018/jupyterssh/</link>
+      <pubDate>Fri, 21 Sep 2018 23:12:00 +0000</pubDate>
+      
+      <guid>https://zack.li/posts/2018/jupyterssh/</guid>
+      <description>Jupyter + Julia + Python piped over SSH is a really great way to develop research code. You get a desktop machine which runs linux, and set up a Jupyter server which runs your notebooks. Then you edit those notebooks in your browser over SSH.
+This solves two annoying problems associated with academic work,
+ Setting up other people&#39;s academic code is difficult. You install your software stack only once, on the Linux machine running the server.</description>
+    </item>
+    
+    <item>
+      <title>Introduction to Fisher Forecasts</title>
+      <link>https://zack.li/posts/2018/fisher/</link>
+      <pubDate>Sun, 19 Aug 2018 13:33:00 +0000</pubDate>
+      
+      <guid>https://zack.li/posts/2018/fisher/</guid>
+      <description>I&#39;ve written an introduction to Fisher information matrices for cosmology, a Jupyter notebook which should teach some of the theory behind Fisher matrices while also providing a hands-on guide. It&#39;s intended for advanced undergraduates and early graduate students. Once the student has completed the notebook, they&#39;ll have written a basic Fisher code for themselves.
+The idea for this came about after writing the fisher code fishchips. Making Fisher matrices is pretty easy, but reading papers is a slow way to learn about specific scientific tools, and it&#39;s not easy to build intuition either.</description>
+    </item>
+    
+  </channel>
+</rss>

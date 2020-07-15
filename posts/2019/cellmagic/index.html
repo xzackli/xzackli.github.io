@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Juypter Notebook Cell Magic | Zack Li</title>
+  <meta name="description" content="some lines I keep typing">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="https://zack.li/css/blog.css">
+  <link rel="stylesheet" href="https://zack.li/css/syntax.css" media="screen">
+  <link rel="stylesheet" href="https://zack.li/css/print.css" media="print">
+</head>
+
+<body>
+  <div class="content">
+    <header>
+  <div class="logo">
+    <a href="/">Zack Li</a>
+  </div>
+  <nav>
+    <a href="/">home</a>
+    /
+    <a href="/about">about</a>
+    /
+    <a href="https://zack.li/index.xml">rss</a>
+  </nav>
+</header>
+
+    
+<main>
+  <article>
+    <div class="title">
+      <h1>Juypter Notebook Cell Magic</h1>
+      
+      <div class="tldr">
+        some lines I keep typing
+      </div>
+      
+      
+      <time datetime="2019-03-26">Mar 26, 2019</time>
+      
+    </div>
+
+    <section class="body">
+      <p>I use some Python cell magic repeatedly -- this post is so I can refer to it
+when I need to paste it into a new notebook.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
+<span class="o">%</span><span class="n">config</span> <span class="n">InlineBackend</span><span class="o">.</span><span class="n">figure_format</span> <span class="o">=</span> <span class="s1">&#39;retina&#39;</span></code></pre></div><div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></code></pre></div>
+<p>The <code>autoreload</code> lets me edit any imported code files and have them change in real time, which is really nice for the notebook workflow.</p>
+
+    </section>
+  </article>
+</main>
+
+  </div>
+  <script src="https://zack.li/js/blog.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+</body>
+</html>

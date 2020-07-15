@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Running Code at Juypter Kernel Startup | Zack Li</title>
+  <meta name="description" content="creating a conda kernel environment">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="https://zack.li/css/blog.css">
+  <link rel="stylesheet" href="https://zack.li/css/syntax.css" media="screen">
+  <link rel="stylesheet" href="https://zack.li/css/print.css" media="print">
+</head>
+
+<body>
+  <div class="content">
+    <header>
+  <div class="logo">
+    <a href="/">Zack Li</a>
+  </div>
+  <nav>
+    <a href="/">home</a>
+    /
+    <a href="/about">about</a>
+    /
+    <a href="https://zack.li/index.xml">rss</a>
+  </nav>
+</header>
+
+    
+<main>
+  <article>
+    <div class="title">
+      <h1>Running Code at Juypter Kernel Startup</h1>
+      
+      <div class="tldr">
+        creating a conda kernel environment
+      </div>
+      
+      
+      <time datetime="2019-10-26">Oct 26, 2019</time>
+      
+    </div>
+
+    <section class="body">
+      <p>I sometimes want to set environmental variables like <code>LD_LIBRARY_PATH</code> and <code>CFLAGS</code> before starting a particular conda kernel in Jupyter, like when I'm using Python code wrapping a C library.</p>
+
+<p>In this case, the important file is the <code>kernel.json</code>. But first, we need to write a file which exports the appropriate environmental variables and then launches the kernel. For example, I put my example of this kind of script in <code>~/scripts/kernel-intel.sh</code>. It sets up variables for the Intel compiler suite on the cluster:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>module load intel-mpi intel intel-mkl
+<span class="nb">export</span> <span class="nv">MPICC</span><span class="o">=</span><span class="sb">`</span>which mpicc<span class="sb">`</span>
+<span class="nb">exec</span> /home/zequnl/.conda/envs/ps/bin/python -m ipykernel_launcher <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span></code></pre></div>
+<p>In this case you should replace the last line with whatever executable the command <code>which python</code> tells you, when your conda environment is activated.</p>
+
+<p>Next, run this bash command to find out where your Jupyter kernels are located.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">jupyter kernelspec list</code></pre></div>
+<p>For example, I get the output</p>
+
+<pre><code>Available kernels:
+  julia-1.1    /home/zequnl/.local/share/jupyter/kernels/julia-1.1
+  julia-1.2    /home/zequnl/.local/share/jupyter/kernels/julia-1.2
+  julia-1.3    /home/zequnl/.local/share/jupyter/kernels/julia-1.3
+  ps           /home/zequnl/.local/share/jupyter/kernels/ps
+  python3      /home/zequnl/.conda/envs/ps/share/jupyter/kernels/python3
+</code></pre>
+
+<p>The conda environment I want to modify is <code>ps</code>. Navigate to the folder corresponding to that kernel,</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">cd</span> /home/zequnl/.local/share/jupyter/kernels/ps</code></pre></div>
+<p>Now open up <code>kernel.json</code>, and change it to something like</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+ <span class="nt">&#34;argv&#34;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&#34;/home/zequnl/scripts/kernel-intel.sh&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;-f&#34;</span><span class="p">,</span>
+  <span class="s2">&#34;{connection_file}&#34;</span>
+ <span class="p">],</span>
+ <span class="nt">&#34;display_name&#34;</span><span class="p">:</span> <span class="s2">&#34;Python 3 (ps)&#34;</span><span class="p">,</span>
+ <span class="nt">&#34;language&#34;</span><span class="p">:</span> <span class="s2">&#34;python&#34;</span>
+<span class="p">}</span></code></pre></div>
+<p>You should modify the path to the script, as well as the display name, for your own configuration.</p>
+
+    </section>
+  </article>
+</main>
+
+  </div>
+  <script src="https://zack.li/js/blog.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+</body>
+</html>

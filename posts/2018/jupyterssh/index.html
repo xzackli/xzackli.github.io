@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Jupyter Over SSH Workflow | Zack Li</title>
+  <meta name="description" content="developing research code over SSH">
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="https://zack.li/css/blog.css">
+  <link rel="stylesheet" href="https://zack.li/css/syntax.css" media="screen">
+  <link rel="stylesheet" href="https://zack.li/css/print.css" media="print">
+</head>
+
+<body>
+  <div class="content">
+    <header>
+  <div class="logo">
+    <a href="/">Zack Li</a>
+  </div>
+  <nav>
+    <a href="/">home</a>
+    /
+    <a href="/about">about</a>
+    /
+    <a href="https://zack.li/index.xml">rss</a>
+  </nav>
+</header>
+
+    
+<main>
+  <article>
+    <div class="title">
+      <h1>Jupyter Over SSH Workflow</h1>
+      
+      <div class="tldr">
+        developing research code over SSH
+      </div>
+      
+      
+      <time datetime="2018-09-21">Sep 21, 2018</time>
+      
+    </div>
+
+    <section class="body">
+      <p><code>Jupyter + Julia + Python</code> piped over SSH is a really great way to develop research code. You get a desktop machine which runs linux, and set up a Jupyter server which runs your notebooks. Then you edit those notebooks in your browser over SSH.</p>
+
+<p>This solves two annoying problems associated with academic work,</p>
+
+<ul>
+<li><strong>Setting up other people's academic code is difficult.</strong> You install your software stack only once, on the Linux machine running the server. Then you can run your code from a remote browser on whatever machine you want, and reconnect later to make analysis plots.</li>
+<li><strong>Remote editing can get desynchronized.</strong> An alternative workflow is to use <code>rsync</code> or an editor like Atom with Remote FTP. But then you have two copies of your files, and things can get pretty confusing.</li>
+<li><strong>I develop on a Mac, but my finished code will run on Linux clusters.</strong> Ideally I would have a Linux laptop, but since I don't, I need all code to run on the Linux server machine.</li>
+</ul>
+
+<p>Jupyter notebooks can be useful as visual pseudo-documentation to remind you of what you were doing a year ago, and are also very good for making interactive, incremental changes. One disadvantage is that it's not the best way to work with Fortran/C/C++ code, which you might want an IDE for. In an ideal world, I'd never have to do that and would code everything in Julia....</p>
+
+<p>Anyway, I use <a href="https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906">JupyterLab</a>. Once you've installed it on your server machine with <code>pip install jupyterlab --user</code> or <code>conda</code>, I add this line to the <code>.bashrc</code> of the machine I want to SSH to (the server)</p>
+
+<pre><code>alias lab_start=&quot;jupyter lab --no-browser --ip=127.0.0.1 --port=7090&quot;
+</code></pre>
+
+<p>Then I run the command <code>lab_start</code> whenever I want to start up a new Jupyter environment. To keep this server in the background, it can be useful to run <code>lab_start</code> in a <code>screen</code> session. This will print out a link, which you will want to put into the browser of your client machine (i.e. your laptop)</p>
+
+<p>Then I add this to the <code>.bashrc</code> of the client machine</p>
+
+<pre><code>alias lab7090=&quot;ssh -N -f -L 7090:localhost:7090 YOURUSERNAME@HOSTNAME.edu&quot;
+</code></pre>
+
+<p>Then when I run <code>lab7090</code>, it will pipe the port 7090 over SSH, and now you see your Jupyter Lab session on your server, in the browser of your client machine by clicking the link provided by the <code>lab_start</code> output.</p>
+
+    </section>
+  </article>
+</main>
+
+  </div>
+  <script src="https://zack.li/js/blog.js"></script>
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+</body>
+</html>
